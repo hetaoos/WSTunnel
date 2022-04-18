@@ -91,7 +91,7 @@ internal class Program
                         connection.bind_host = host.AddressList[0];
                     }
                 }
-                if (!int.TryParse(values[index++], out var port) || port <= 0 || port >= short.MaxValue)
+                if (!int.TryParse(values[index++], out var port) || port <= 0 || port >= ushort.MaxValue)
                 {
                     Console.WriteLine($"--tunnel {tunnel} 本地监听端口不正确。");
                     return;
