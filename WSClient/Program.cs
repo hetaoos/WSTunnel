@@ -103,7 +103,7 @@ internal class Program
                     Console.WriteLine($"--tunnel {tunnel} 目标主机不正确。");
                     return;
                 }
-                if (!int.TryParse(values[index++], out port) || port <= 0 || port >= short.MaxValue)
+                if (!int.TryParse(values[index++], out port) || port <= 0 || port >= ushort.MaxValue)
                 {
                     Console.WriteLine($"--tunnel {tunnel} 目标端口不正确。");
                     return;
