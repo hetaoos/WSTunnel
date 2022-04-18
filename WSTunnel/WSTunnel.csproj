@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<Nullable>enable</Nullable>	
+		<PackageProjectUrl>https://github.com/hetaoos/wstunnel</PackageProjectUrl>
+		<Description>WebSocket Tunnel</Description>
+		<Product>WSTunnel</Product>
+		<Company>Null</Company>
+		<RepositoryUrl>https://github.com/hetaoos/wstunnel</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DotNetty.Handlers" Version="0.7.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
+		<PackageReference Include="System.Text.Json" Version="6.0.3" />
+	</ItemGroup>
+</Project>

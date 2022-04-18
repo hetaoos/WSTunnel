@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackageProjectUrl>https://github.com/hetaoos/wstunnel</PackageProjectUrl>
+		<Description>WebSocket Tunnel 客户端</Description>
+		<Product>WSTunnel</Product>
+		<Company>Null</Company>
+		<RepositoryUrl>https://github.com/hetaoos/wstunnel</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <DefineConstants>$(DefineConstants)TRACE;__WSCLIENT__</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <DefineConstants>$(DefineConstants)TRACE;__WSCLIENT__</DefineConstants>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Include="..\WSTunnel\TunnelParam.cs" Link="TunnelParam.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DotNetty.Handlers" Version="0.7.2" />
+		<PackageReference Include="System.Net.WebSockets.Client" Version="4.3.2" />
+		<PackageReference Include="System.CommandLine" Version="2.0.0-beta3.22114.1" />
+	</ItemGroup>
+</Project>
