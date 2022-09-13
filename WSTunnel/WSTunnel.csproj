@@ -8,6 +8,8 @@
 		<Company>Null</Company>
 		<RepositoryUrl>https://github.com/hetaoos/wstunnel</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<SatelliteResourceLanguages>zh;zh-Hans</SatelliteResourceLanguages>
 	</PropertyGroup>
 
 	<ItemGroup>
