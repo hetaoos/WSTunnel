@@ -49,7 +49,7 @@ namespace WSTunnel
             var tcpClientService = context.Request.HttpContext.RequestServices.GetRequiredService<TunnelService>();
             var r = await tcpClientService.Handle(webSocket, param);
             if (webSocket.CloseStatus == null)
-                await webSocket.CloseAsync(r ? WebSocketCloseStatus.NormalClosure : WebSocketCloseStatus.InternalServerError, null, default);
+                await webSocket.CloseOutputAsync(r ? WebSocketCloseStatus.NormalClosure : WebSocketCloseStatus.InternalServerError, null, default);
         }
     }
 }

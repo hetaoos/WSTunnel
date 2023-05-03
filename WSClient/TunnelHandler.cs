@@ -88,7 +88,7 @@ namespace WSTunnel
         {
             if (client != null)
             {
-                client?.CloseAsync(WebSocketCloseStatus.NormalClosure, null, default);
+                client?.CloseOutputAsync(WebSocketCloseStatus.NormalClosure, null, default);
                 client?.Dispose();
                 client = null;
             }

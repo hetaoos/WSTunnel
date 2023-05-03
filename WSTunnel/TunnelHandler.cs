@@ -131,7 +131,7 @@ namespace WSTunnel
             }
 
             if (webSocket != null && webSocket.CloseStatus == null)
-                await webSocket.CloseAsync(
+                await webSocket.CloseOutputAsync(
                      WebSocketCloseStatus.NormalClosure,
                     receiveResult.CloseStatusDescription,
                     CancellationToken.None);
